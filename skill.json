@@ -1,0 +1,38 @@
+{
+  "name": "genpark-neural-voiceprint-speaker-diarization-engine-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Neural voiceprint speaker diarization engine distinguishing overlapping voices with sub-second accuracy.",
+  "author": "genpark",
+  "category": "speaker-diarization",
+  "tags": [
+    "speaker-diarization",
+    "pyannote",
+    "voiceprint-biometrics",
+    "overlap-separation",
+    "rttm-timeline"
+  ],
+  "inputs": {
+    "multi_speaker_audio_url": {
+      "type": "string"
+    },
+    "max_speakers": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "diarization_job_id": {
+      "type": "string"
+    },
+    "distinct_speakers_identified": {
+      "type": "integer"
+    },
+    "diarization_error_rate_der_pct": {
+      "type": "number"
+    },
+    "rttm_diarization_file_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
